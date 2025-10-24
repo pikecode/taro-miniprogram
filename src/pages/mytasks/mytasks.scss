@@ -1,0 +1,188 @@
+.mytasks-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding-bottom: 100px;
+}
+
+// 统计头部
+.stats-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  padding: 24px 32px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stats-label {
+  font-size: 20px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.stats-count {
+  font-size: 36px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 40px;
+  background: #e5e7eb;
+  margin: 0 16px;
+}
+
+// Tab 切换
+.tabs-container {
+  display: flex;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tab-item {
+  flex: 1;
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 24px;
+  color: #9ca3af;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+
+  &.active {
+    color: #1f2937;
+    border-bottom-color: #ef4444;
+    font-weight: 600;
+  }
+}
+
+// 任务列表
+.task-list {
+  padding: 16px 32px;
+  height: calc(100vh - 340px);
+}
+
+.task-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+
+  &:active {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.task-info {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.task-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.task-dept {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.task-badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #ef4444;
+  white-space: nowrap;
+}
+
+.badge-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.meta-date {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+// 任务进度
+.task-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 18px;
+  color: #10b981;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+// 空状态
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  font-size: 24px;
+  color: #9ca3af;
+}

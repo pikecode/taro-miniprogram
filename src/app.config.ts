@@ -1,0 +1,48 @@
+export default {
+  pages: [
+    'pages/index/index',
+    'pages/mytasks/mytasks',
+    'pages/report/report',
+    'pages/analytics/analytics',
+    'pages/profile/profile'
+  ],
+  window: {
+    backgroundTextStyle: 'light',
+    navigationBarBackgroundColor: '#fff',
+    navigationBarTitleText: '督查',
+    navigationBarTextStyle: 'black'
+  },
+  tabBar: {
+    color: '#9ca3af',
+    selectedColor: '#ef4444',
+    backgroundColor: '#ffffff',
+    borderStyle: 'black',
+    list: [
+      {
+        pagePath: 'pages/index/index',
+        text: '首页',
+        iconData: '🏠'
+      },
+      {
+        pagePath: 'pages/mytasks/mytasks',
+        text: '我的任务',
+        iconData: '📋'
+      },
+      {
+        pagePath: 'pages/report/report',
+        text: '数据上报',
+        iconData: '📊'
+      },
+      {
+        pagePath: 'pages/analytics/analytics',
+        text: '分析报表',
+        iconData: '📈'
+      },
+      {
+        pagePath: 'pages/profile/profile',
+        text: '个人中心',
+        iconData: '👤'
+      }
+    ]
+  }
+}

@@ -1,0 +1,337 @@
+.index {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+// 顶部欢迎区
+.header-section {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 60%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 32px 32px 48px;
+  color: #ffffff;
+}
+
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.username {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+// 主内容区
+.content-section {
+  margin-top: -40px;
+  padding: 48px 32px 32px;
+  background: #ffffff;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -12px 32px rgba(15, 23, 42, 0.08);
+  flex: 1;
+}
+
+// 任务卡片
+.task-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #9ca3af;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.task-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.task-label {
+  font-size: 20px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.task-count {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+// 快速功能区
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.action-item {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+
+  &:active {
+    background: #e5e7eb;
+    transform: scale(0.98);
+  }
+}
+
+.action-icon {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.action-text {
+  font-size: 20px;
+  color: #374151;
+  font-weight: 500;
+}
+
+// 功能项网格
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 12px;
+  background: #fafbfc;
+  border-radius: 12px;
+  border: 1px solid #f0f1f3;
+  transition: all 0.2s ease;
+
+  &:active {
+    background: #f0f1f3;
+  }
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.feature-name {
+  font-size: 20px;
+  color: #374151;
+  font-weight: 500;
+}
+
+// 猜你喜欢模块
+.guess-like-section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.guess-like-section .section-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+
+  &:active {
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-placeholder {
+  font-size: 64px;
+  opacity: 0.6;
+}
+
+.heart-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  Text {
+    font-size: 24px;
+  }
+}
+
+.product-name {
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 500;
+  padding: 12px 12px 8px;
+  display: block;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #ef4444;
+  font-weight: 600;
+  padding: 0 12px 12px;
+  display: block;
+}
+
+// 底部推广区
+.footer-promotion {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.qrcode-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrcode-placeholder {
+  font-size: 48px;
+  margin-bottom: 16px;
+  letter-spacing: 8px;
+  color: #d1d5db;
+  font-family: monospace;
+}
+
+.promotion-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.promotion-subtitle {
+  font-size: 20px;
+  color: #9ca3af;
+}
