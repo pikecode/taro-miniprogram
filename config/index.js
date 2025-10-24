@@ -54,8 +54,6 @@ const config = {
     },
     webpackChain(chain) {
       chain.resolve.alias
-        .set('@/components', path.resolve(__dirname, '..', 'src/components'))
-        .set('@/utils', path.resolve(__dirname, '..', 'src/utils'))
         .set('@/package', path.resolve(__dirname, '..', 'package.json'))
         .set('@/project', path.resolve(__dirname, '..', 'project.config.json'))
     }

@@ -108,9 +108,11 @@ var MyTasks = /*#__PURE__*/function (_Component) {
         progress: 100
       }]
     });
-    (0,_Users_peak_work_pikecode_taro_miniprogram_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_this, "handleTaskClick", function (taskId) {
-      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().navigateTo({
-        url: "/pages/mytasks/detail?id=".concat(taskId)
+    (0,_Users_peak_work_pikecode_taro_miniprogram_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_this, "handleTaskClick", function () {
+      _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
+        title: '详情功能待实现',
+        icon: 'none',
+        duration: 2000
       });
     });
     (0,_Users_peak_work_pikecode_taro_miniprogram_node_modules_babel_runtime_helpers_esm_defineProperty_js__WEBPACK_IMPORTED_MODULE_5__["default"])(_this, "handleTabChange", function (tab) {
@@ -233,9 +235,7 @@ var MyTasks = /*#__PURE__*/function (_Component) {
           children: [tasks.map(function (task) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
               className: "task-item",
-              onClick: function onClick() {
-                return _this2.handleTaskClick(task.id);
-              },
+              onClick: _this2.handleTaskClick,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {
                 className: "task-header",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_8__.View, {

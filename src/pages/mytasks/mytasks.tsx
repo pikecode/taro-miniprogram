@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View, Text, ScrollView, Swiper, SwiperItem } from '@tarojs/components'
+import { View, Text, ScrollView } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import './mytasks.scss'
 
@@ -95,9 +95,11 @@ export default class MyTasks extends Component {
     ] as Task[]
   }
 
-  handleTaskClick = (taskId: string) => {
-    Taro.navigateTo({
-      url: `/pages/mytasks/detail?id=${taskId}`
+  handleTaskClick = () => {
+    Taro.showToast({
+      title: '详情功能待实现',
+      icon: 'none',
+      duration: 2000
     })
   }
 
@@ -197,7 +199,7 @@ export default class MyTasks extends Component {
             <View
               key={task.id}
               className='task-item'
-              onClick={() => this.handleTaskClick(task.id)}
+              onClick={this.handleTaskClick}
             >
               <View className='task-header'>
                 <View className='task-info'>
